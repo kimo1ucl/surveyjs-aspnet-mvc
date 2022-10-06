@@ -1,0 +1,62 @@
+{
+  "title": "Danske Bank Survey",
+  "description": "Dette er en demo",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "name": "birthday",
+          "title": "Hvor gammel er du",
+          "isRequired": true,
+          "inputType": "number",
+          "min": 0,
+          "max": 119,
+          "step": 0
+        }
+      ],
+      "title": "Indledning",
+      "description": "Editorial: Responden spoerges om alder, der skal valideres for at selve surveyen starter"
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "Knows Danske Bank",
+          "title": "Kender du Danske Bank",
+          "description": "Fra venner, some, TV/Radio",
+          "isRequired": true
+        }
+      ],
+      "title": "Survey start",
+      "description": "Her starter surveyen"
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Tak for din deltagels",
+          "html": "<p>Tak for din besvarelse<img src=\"https://html-online.com/editor/tiny4_9_11/plugins/emoticons/img/smiley-smile.gif\" alt=\"smile\" /></p>"
+        }
+      ],
+      "title": "Survey slut",
+      "description": "Surveyen er slut"
+    }
+  ],
+  "triggers": [
+    {
+      "type": "skip",
+      "expression": "{birthday} < 18 or {birthday} > 23",
+      "gotoName": "Tak for din deltagels"
+    },
+    {
+      "type": "skip",
+      "expression": "{birthday} > 17 and {birthday} < 22",
+      "gotoName": "Knows Danske Bank"
+    }
+  ]
+}
