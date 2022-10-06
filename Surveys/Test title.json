@@ -1,0 +1,19 @@
+{
+ "title": "Test title",
+ "description": "This is a description test",
+ "logoPosition": "right",
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "text",
+     "name": "question1",
+     "title": "How old are you"
+    }
+   ],
+   "title": "PAge 1 Test",
+   "description": "This is a Page test description"
+  }
+ ]
+}
