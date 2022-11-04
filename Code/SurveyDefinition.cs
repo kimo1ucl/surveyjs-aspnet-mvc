@@ -31,7 +31,7 @@ namespace surveyjs_aspnet_mvc
         {
 
             //iterate survey files
-            var filepaths = Directory.GetFiles(@".\Surveys", "*.json")
+            var filepaths = Directory.GetFiles(@"./Surveys", "*.json")
                 .ToList();
             int counter = 0;
 
